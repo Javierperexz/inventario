@@ -1,9 +1,3 @@
-databases:
-  - name: inventario-db
-    plan: free
-    databaseName: inventario
-    user: inventario_admin
-
 services:
   - type: web
     name: inventario-web
@@ -34,8 +28,11 @@ services:
       - key: DB_USERNAME
         value: avnadmin
       - key: DB_PASSWORD
-        value: TU_CONTRASEÑA_DE_AIVEN
-
+        value: "AQUI_VA_LA_CONTRASEÑA_REAL_DE_AIVEN"
+      - key: MYSQL_ATTR_SSL_CA
+        value: /etc/ssl/certs/ca-certificates.crt
+      - key: DB_SSL_VERIFY_SERVER_CERT
+        value: "false"
       - key: SESSION_DRIVER
         value: database
       - key: CACHE_STORE
