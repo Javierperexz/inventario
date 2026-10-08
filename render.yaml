@@ -22,7 +22,7 @@ services:
       - key: APP_KEY
         value: "base64:9zsVb5+YgPvilBv6Qq52+4Q2WpOIwwqrDaR4l886XWc="
       - key: APP_URL
-        value: https://inventario-lwy4.onrender.com
+        value: https://inventario-web-on8a.onrender.com
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST
