@@ -7,7 +7,7 @@
 ],
 [
     'name' => 'Productos',
-    'href' => ('admin.products.index'),
+    'href' => route('admin.products.index'),
 ],
 [
     'name' => 'Nuevo'

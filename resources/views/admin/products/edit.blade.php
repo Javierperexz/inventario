@@ -7,7 +7,7 @@
 ],
 [
     'name' => 'Productos',
-    'href' => ('admin.products.index'),
+    'href' => route('admin.products.index'),
 ],
 [
     'name' => 'Editar'
@@ -116,7 +116,7 @@
                             .then(response => {
                                 console.log(response.data);
                             })
-                            .cath(error => {
+                            .catch(error => {
                                 console.error(error);
                             });
                     });

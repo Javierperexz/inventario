@@ -35,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        Gate::authorize('read-products');
+        Gate::authorize('create-products');
 
         $data = $request->validate([
             'name' => 'required|string|max:255',
@@ -52,7 +52,7 @@ class ProductController extends Controller
             'title' => '¡Bien Hecho!',
             'text' => 'El producto se ha creado correctamente.'
         ]);
-        return redirect()->route('admin.products.index',$product);
+        return redirect()->route('admin.products.index');
     }
 
     public function edit(Product $product)
@@ -84,7 +84,7 @@ class ProductController extends Controller
             'title' => '¡Bien Hecho!',
             'text' => 'El producto se ha actualizado correctamente.'
         ]);
-        return redirect()->route('admin.products.index',$product);
+        return redirect()->route('admin.products.index');
     }
 
     /**

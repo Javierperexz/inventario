@@ -21,7 +21,7 @@ class IdentitySeeder extends Seeder
         ];
         foreach ($identities as $identity) {
             Identity::firstOrCreate([
-                'name' => $identity,
+                'name' => trim($identity),
             ]);
         }
     }

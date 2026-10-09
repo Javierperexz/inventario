@@ -52,7 +52,9 @@ class ReasonSeeder extends Seeder
 
         foreach ($reasons as $reason) {
             Reason::firstOrCreate(
-                ['name' => $reason['name']],
+                ['name' => $reason['name'],
+                'type' => $reason['type'],
+                ],
                 $reason
             );
         }
